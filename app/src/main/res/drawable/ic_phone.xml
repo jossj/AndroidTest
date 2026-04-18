@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="180dp"
+    android:viewportWidth="180"
+    android:viewportHeight="180">
+
+    <!-- Phone body -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M55,20 Q55,10 65,10 L115,10 Q125,10 125,20 L125,160 Q125,170 115,170 L65,170 Q55,170 55,160 Z" />
+
+    <!-- Screen area -->
+    <path
+        android:fillColor="#EEF2FF"
+        android:pathData="M62,30 L118,30 L118,145 L62,145 Z" />
+
+    <!-- Home indicator bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,155 Q90,152 100,155 Q90,158 80,155 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3" />
+
+    <!-- Speaker grille -->
+    <path
+        android:fillColor="#3730A3"
+        android:pathData="M82,18 Q90,16 98,18 Q90,20 82,18 Z"
+        android:strokeColor="#3730A3"
+        android:strokeWidth="2" />
+
+    <!-- Screen content - signal bars -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M72,60 L76,60 L76,80 L72,80 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M80,52 L84,52 L84,80 L80,80 Z" />
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M88,44 L92,44 L92,80 L88,80 Z" />
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M96,36 L100,36 L100,80 L96,80 Z" />
+
+    <!-- Screen content - text lines -->
+    <path
+        android:fillColor="#C7D2FE"
+        android:pathData="M70,92 L110,92 Q110,95 110,95 L70,95 Q70,92 70,92 Z" />
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M70,101 L100,101 Q100,104 100,104 L70,104 Q70,101 70,101 Z" />
+    <path
+        android:fillColor="#E0E7FF"
+        android:pathData="M70,110 L105,110 Q105,113 105,113 L70,113 Q70,110 70,110 Z" />
+
+</vector>

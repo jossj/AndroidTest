@@ -3,4 +3,8 @@
     <string name="tagline">A modern Android experience.\nBuilt with simplicity in mind.</string>
     <string name="get_started">Get Started</string>
     <string name="app_logo_desc">App logo</string>
+    <string name="splash_title">Welcome</string>
+    <string name="splash_subtitle">Your mobile experience starts here.\nPowered by Android.</string>
+    <string name="next">Next</string>
+    <string name="phone_image_desc">Phone illustration</string>
 </resources>
