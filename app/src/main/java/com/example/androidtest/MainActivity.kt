@@ -1,7 +1,7 @@
 package com.example.androidtest
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidtest.databinding.ActivityMainBinding
 
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnGetStarted.setOnClickListener {
-            Toast.makeText(this, "Welcome! Let's get started.", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MenuActivity::class.java))
         }
     }
 }

@@ -7,4 +7,8 @@
     <string name="splash_subtitle">Your mobile experience starts here.\nPowered by Android.</string>
     <string name="next">Next</string>
     <string name="phone_image_desc">Phone illustration</string>
+    <string name="menu_title">Menu</string>
+    <string name="menu_item_1">Item 1</string>
+    <string name="menu_item_2">Item 2</string>
+    <string name="menu_item_3">Item 3</string>
 </resources>
