@@ -152,17 +152,17 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp" />
 
-    <!-- Sign up prompt -->
+    <!-- Register prompt -->
     <LinearLayout
-        android:id="@+id/llSignUp"
+        android:id="@+id/llRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginError"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="40dp">
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -172,10 +172,10 @@
             android:textColor="@color/text_secondary" />
 
         <TextView
-            android:id="@+id/tvSignUp"
+            android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up"
+            android:text="@string/register"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/button_primary"

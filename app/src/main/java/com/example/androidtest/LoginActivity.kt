@@ -29,8 +29,8 @@ class LoginActivity : AppCompatActivity() {
             // Placeholder for forgot password flow
         }
 
-        binding.tvSignUp.setOnClickListener {
-            // Placeholder for sign-up flow
+        binding.tvRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
