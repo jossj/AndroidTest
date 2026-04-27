@@ -13,4 +13,8 @@
     <color name="text_primary">#1A1A2E</color>
     <color name="text_secondary">#6B7280</color>
     <color name="button_primary">#4F46E5</color>
+
+    <!-- Login page -->
+    <color name="input_stroke">#4F46E5</color>
+    <color name="error_red">#DC2626</color>
 </resources>
