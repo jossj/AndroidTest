@@ -51,13 +51,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp" />
 
-    <!-- Email field -->
+    <!-- Username field -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmail"
+        android:id="@+id/tilUsername"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_email"
+        android:hint="@string/hint_username"
         app:boxStrokeColor="@color/input_stroke"
         app:hintTextColor="@color/text_secondary"
         app:layout_constraintTop_toBottomOf="@id/tvLoginSubtitle"
@@ -68,10 +68,10 @@
         android:layout_marginEnd="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:inputType="text"
             android:imeOptions="actionNext"
             android:textColor="@color/text_primary" />
 
@@ -87,7 +87,7 @@
         app:passwordToggleEnabled="true"
         app:boxStrokeColor="@color/input_stroke"
         app:hintTextColor="@color/text_secondary"
-        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:layout_constraintTop_toBottomOf="@id/tilUsername"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"

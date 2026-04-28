@@ -4,7 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.androidtest.databinding.ActivityLoginBinding
+import com.example.androidtest.network.ApiClient
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -16,49 +19,74 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            val email = binding.etEmail.text?.toString()?.trim() ?: ""
+            val username = binding.etUsername.text?.toString()?.trim() ?: ""
             val password = binding.etPassword.text?.toString() ?: ""
-
-            if (!validateInputs(email, password)) return@setOnClickListener
-
-            startActivity(Intent(this, MenuActivity::class.java))
-            finish()
+            if (!validateInputs(username, password)) return@setOnClickListener
+            login(username, password)
         }
 
-        binding.tvForgotPassword.setOnClickListener {
-            // Placeholder for forgot password flow
-        }
+        binding.tvForgotPassword.setOnClickListener { /* placeholder */ }
 
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
-    private fun validateInputs(email: String, password: String): Boolean {
-        binding.tilEmail.error = null
+    private fun login(username: String, password: String) {
+        setLoading(true)
+        ApiClient.setCredentials(username, password)
+
+        lifecycleScope.launch {
+            try {
+                val response = ApiClient.service.secure()
+                when {
+                    response.isSuccessful -> {
+                        startActivity(Intent(this@LoginActivity, MenuActivity::class.java))
+                        finish()
+                    }
+                    response.code() == 401 -> {
+                        ApiClient.setCredentials("", "")
+                        showError(getString(R.string.error_invalid_credentials))
+                    }
+                    else -> {
+                        ApiClient.setCredentials("", "")
+                        showError(getString(R.string.error_server, response.code()))
+                    }
+                }
+            } catch (e: Exception) {
+                ApiClient.setCredentials("", "")
+                showError(getString(R.string.error_network))
+            } finally {
+                setLoading(false)
+            }
+        }
+    }
+
+    private fun setLoading(loading: Boolean) {
+        binding.btnLogin.isEnabled = !loading
+        binding.btnLogin.text =
+            if (loading) getString(R.string.logging_in) else getString(R.string.login_button)
+        binding.tvLoginError.visibility = View.GONE
+    }
+
+    private fun showError(message: String) {
+        binding.tvLoginError.text = message
+        binding.tvLoginError.visibility = View.VISIBLE
+    }
+
+    private fun validateInputs(username: String, password: String): Boolean {
+        binding.tilUsername.error = null
         binding.tilPassword.error = null
         binding.tvLoginError.visibility = View.GONE
 
-        if (email.isEmpty()) {
-            binding.tilEmail.error = getString(R.string.error_email_required)
+        if (username.isEmpty()) {
+            binding.tilUsername.error = getString(R.string.error_username_required)
             return false
         }
-
-        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.tilEmail.error = getString(R.string.error_email_invalid)
-            return false
-        }
-
         if (password.isEmpty()) {
             binding.tilPassword.error = getString(R.string.error_password_required)
             return false
         }
-
-        if (password.length < 6) {
-            binding.tilPassword.error = getString(R.string.error_password_short)
-            return false
-        }
-
         return true
     }
 }
