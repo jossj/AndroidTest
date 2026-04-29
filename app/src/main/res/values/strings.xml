@@ -1,14 +1,48 @@
 <resources>
     <string name="app_name">AndroidTest</string>
-    <string name="tagline">A modern Android experience.\nBuilt with simplicity in mind.</string>
-    <string name="get_started">Get Started</string>
     <string name="app_logo_desc">App logo</string>
-    <string name="splash_title">Welcome</string>
-    <string name="splash_subtitle">Your mobile experience starts here.\nPowered by Android.</string>
-    <string name="next">Next</string>
-    <string name="phone_image_desc">Phone illustration</string>
-    <string name="menu_title">Menu</string>
-    <string name="menu_item_1">Item 1</string>
-    <string name="menu_item_2">Item 2</string>
-    <string name="menu_item_3">Item 3</string>
+
+    <!-- Menu / user list -->
+    <string name="menu_title">Users</string>
+    <string name="menu_subtitle">Fetched from the Spring API</string>
+
+    <!-- Login page -->
+    <string name="login_title">Sign In</string>
+    <string name="login_subtitle">Welcome back! Enter your credentials to continue.</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_button">Log In</string>
+    <string name="logging_in">Logging in…</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+
+    <!-- Login errors -->
+    <string name="error_username_required">Username is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_invalid_credentials">Invalid username or password</string>
+    <string name="error_server">Server error (%d)</string>
+    <string name="error_network">Could not reach the server. Check your connection.</string>
+
+    <!-- Register page -->
+    <string name="register_title">Create Account</string>
+    <string name="register_subtitle">Fill in the details below to get started.</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_full_name">Full name (used as username)</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="register_button">Create Account</string>
+    <string name="registering">Creating account…</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="log_in">Log In</string>
+    <string name="back">Back</string>
+    <string name="register_success">Account created! You can now log in.</string>
+
+    <!-- Register errors -->
+    <string name="error_name_required">Full name is required</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_password_short">Password must be at least 6 characters</string>
+    <string name="error_confirm_password_required">Please confirm your password</string>
+    <string name="error_passwords_mismatch">Passwords do not match</string>
+    <string name="error_register_failed">Registration failed (%d). Try again.</string>
 </resources>
