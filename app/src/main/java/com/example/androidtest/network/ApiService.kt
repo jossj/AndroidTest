@@ -1,5 +1,8 @@
 package com.example.androidtest.network
 
+import com.example.androidtest.model.Reward
+import com.example.androidtest.model.RewardRequest
+import com.example.androidtest.model.Student
 import com.example.androidtest.model.User
 import retrofit2.Response
 import retrofit2.http.*
@@ -26,4 +29,13 @@ interface ApiService {
 
     @DELETE("api/users/{id}")
     suspend fun deleteUser(@Path("id") id: Long): Response<Unit>
+
+    @GET("api/students")
+    suspend fun getStudents(): Response<List<Student>>
+
+    @GET("api/rewards")
+    suspend fun getRewards(): Response<List<Reward>>
+
+    @POST("api/rewards")
+    suspend fun createReward(@Body reward: RewardRequest): Response<Reward>
 }

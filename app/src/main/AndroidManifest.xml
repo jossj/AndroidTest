@@ -25,6 +25,9 @@
         <activity
             android:name=".MenuActivity"
             android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

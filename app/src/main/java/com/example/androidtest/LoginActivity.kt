@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
                 val response = ApiClient.service.secure()
                 when {
                     response.isSuccessful -> {
-                        startActivity(Intent(this@LoginActivity, MenuActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
                         finish()
                     }
                     response.code() == 401 -> {

@@ -37,6 +37,26 @@
     <string name="back">Back</string>
     <string name="register_success">Account created! You can now log in.</string>
 
+    <!-- Dashboard -->
+    <string name="app_brand">RewardTrack</string>
+    <string name="dashboard_subtitle">Admin Dashboard</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="stat_students">Total Students</string>
+    <string name="stat_rewards">Total Rewards</string>
+    <string name="stat_points">Points Awarded</string>
+    <string name="section_leaderboard">Points Leaderboard</string>
+    <string name="section_rewards_behavior">Rewards by Behavior</string>
+    <string name="section_students_class">Students by Class</string>
+    <string name="section_add_reward">Add Student Reward</string>
+    <string name="hint_reward_title">Title (e.g. "Great job!")</string>
+    <string name="hint_reward_description">Description (optional)</string>
+    <string name="hint_reward_points">Points</string>
+    <string name="btn_submit_reward">Submit Reward</string>
+    <string name="select_student">Select student…</string>
+    <string name="select_behavior">Select behavior…</string>
+    <string name="all_year_levels">All Year Levels</string>
+    <string name="all_classes">All Classes</string>
+
     <!-- Register errors -->
     <string name="error_name_required">Full name is required</string>
     <string name="error_email_required">Email is required</string>
